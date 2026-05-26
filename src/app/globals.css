@@ -1,0 +1,101 @@
+@import "tailwindcss";
+
+@theme {
+  /* ─── Colors ─────────────────────────────────────────── */
+  --color-bg: #0a0c0f;
+  --color-surface: #111318;
+  --color-card: #161a22;
+  --color-card2: #1c2130;
+  --color-border: rgba(255, 255, 255, 0.07);
+  --color-border2: rgba(255, 255, 255, 0.12);
+  --color-text: #f0f2f5;
+  --color-text2: #8892a4;
+  --color-text3: #4e5a6e;
+  --color-accent: #3b82f6;
+  --color-safe: #22c55e;
+  --color-warn: #f59e0b;
+  --color-danger: #ef4444;
+
+  /* ─── Shadows ─────────────────────────────────────────── */
+  --shadow-safe-glow: 0 0 8px #22c55e;
+  --shadow-warn-glow: 0 0 8px #f59e0b;
+  --shadow-danger-glow: 0 0 8px #ef4444;
+
+  /* ─── Fonts ────────────────────────────────────────────── */
+  --font-mono: "Space Mono", monospace;
+  --font-cond: "Barlow Condensed", sans-serif;
+  --font-sans: "Barlow", sans-serif;
+}
+
+/* ─── Base ───────────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  background-color: #0a0c0f;
+  color: #f0f2f5;
+  font-family: "Barlow", sans-serif;
+  -webkit-tap-highlight-color: transparent;
+  overscroll-behavior: none;
+}
+
+/* Hide scrollbars but keep scrolling */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Smooth scroll */
+* {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+/* Touch target minimum */
+button {
+  min-height: 44px;
+  cursor: pointer;
+}
+
+textarea {
+  font-family: "Barlow", sans-serif;
+}
+
+/* Mapbox overrides for dark theme */
+.mapboxgl-popup-content {
+  background: #1c2130;
+  color: #f0f2f5;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  padding: 8px;
+}
+
+.mapboxgl-popup-content-item {
+  font-family: "Barlow", sans-serif;
+}
+
+.mapboxgl-popup-anchor-top > .mapboxgl-popup-content {
+  margin-top: 8px;
+}
+
+.mapboxgl-popup-tip {
+  border-top-color: #1c2130;
+}
+
+.mapboxgl-ctrl-attrib {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #8892a4;
+  font-size: 10px;
+}
+
+.mapboxgl-ctrl-attrib-button {
+  color: #8892a4;
+}
+
+.mapboxgl-ctrl-bottom-right .mapboxgl-ctrl {
+  margin: 10px 10px 0 0;
+}
